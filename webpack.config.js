@@ -10,7 +10,7 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
 
     // 打包的入口文件
-    entry: './src/app.js',
+    entry: './src/js/main.js',
 
     // 打包后文件输出
     output: {
