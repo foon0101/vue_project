@@ -15,6 +15,6 @@ export default new VueRouter({
         {path:"/index",component:Cindex},
         // 配置新闻相关路由
         {path:"/news/list",component:CnewsList},
-        {path:"/news/details",component:CnewsDetails}
+        {path:"/news/details/:id",component:CnewsDetails}
     ]
 });
