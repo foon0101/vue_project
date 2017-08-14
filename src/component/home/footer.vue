@@ -1,7 +1,7 @@
 <template>
     <footer class="footer">
         <nav class="mui-bar mui-bar-tab">
-            <a class="mui-tab-item mui-active" href="#tabbar">
+            <a class="mui-tab-item mui-active" href="#index">
                 <span class="mui-icon mui-icon-home"></span>
                 <span class="mui-tab-label">首页</span>
             </a>
