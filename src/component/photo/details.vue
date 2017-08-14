@@ -1,5 +1,6 @@
 <template>
     <section class="details">
+        <v-title :title="title"></v-title>
         <div class="mui-card">
 			<div class="mui-card-header">
                 <h4>{{ info.title }}</h4>
@@ -21,10 +22,13 @@
 </template>
 
 <script>
-    import config from '../../js/config.js'
+    import config from '../../js/config.js';
+    import Ctitle from '../common/title.vue';
+
     export default{
         data(){
             return {
+                title:"图片详情",
                 info:{},
                 hums:[]
             };
@@ -47,7 +51,7 @@
                     if(resp.body.status==0){
                         // 遍历图片列表，修改每一个图片对象的img_url地址
                         this.hums = resp.body.message.map(function(photo,i) {
-                            console.log(photo);
+                            // console.log(photo);
                             photo.src = config.imgDomain + photo.src;
                             return photo;
                         });
@@ -59,6 +63,10 @@
         created() {
             this.getInfo();
             this.getHums();
+        },
+
+        components:{
+            "v-title":Ctitle,
         }
     };
 </script>
