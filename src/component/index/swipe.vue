@@ -40,7 +40,7 @@
     }
 </script>
 
-<style lang="less">
+<style scoped lang="less">
     .swipe {
         height:300px;
         img{

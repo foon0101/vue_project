@@ -17,7 +17,9 @@
         <!-- 内容区域 -->
         <div class="mui-card" v-for="item in photoList" :key="item.id">
             <router-link :to="'/photo/details/' + item.id">
-			    <div class="mui-card-header mui-card-media" :style="getStyle(item)"></div>
+			    <div class="mui-card-header">
+                    <img v-lazy="item.img_url">
+                </div>
             </router-link>
 			<div class="mui-card-content">
 				<div class="mui-card-content-inner">
@@ -43,7 +45,7 @@
             // 实例身上有一个$route属性，当前页面变化时，这个属性的值也会跟着变化,
             // 只要页面一变化，那么就根据新的id渲染图片列表
             $route() {
-            this.getPhotoList(this.$route.params.id);
+                this.getPhotoList(this.$route.params.id);
             }
         },
 
@@ -63,6 +65,7 @@
                 this.$http.get(url).then(resp => {
                     if(resp.body.status == 0){
                         this.photoList = resp.body.message.map(function(photo,i) {
+                            console.log(photo);
                             photo.img_url = config.imgDomain + photo.img_url;
                             return photo;
                         });
@@ -106,6 +109,15 @@
                     margin-left: 15px;
                 }
             }
+        }
+    }
+    .mui-card-header img {
+        width: 100%;
+        height: 100%;
+        &[lazy=loading] {
+            width: 40px;
+            height: 300px;
+            margin: auto;
         }
     }
 

@@ -11,7 +11,7 @@
     }
 </script>
 
-<style lang="less">
+<style scoped lang="less">
     .header {
         div{
             height:40px;

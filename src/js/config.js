@@ -13,4 +13,11 @@ export default {
     photoCategoryList: domain + '/api/getimgcategory',  // 图片分类
     photoHums:domain + '/api/getthumimages/',  //缩略图
     photoInfo:domain + '/api/getimageInfo/',  //图片数据详情
+    // 商品路由
+    goodsList:domain + '/api/getgoods',   //商品列表
+    goodsGetDesc:domain + '/api/goods/getdesc/',   //商品图文介绍
+    goodsGetThumImages:domain + '/api/getthumimages/',   //轮播图数据
+    goodsGetInfo: domain + '/api/goods/getinfo/',     //获取商品价格相关信息
+    // 购物车路由
+    shopCar:domain + "/api/goods/getshopcarlist/"     //获取购物车数据
 };

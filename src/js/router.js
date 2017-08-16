@@ -12,6 +12,13 @@ import CnewsDetails from '../component/news/details.vue';
 import CphotoList from '../component/photo/list.vue';
 import CphotoDetails from '../component/photo/details.vue';
 
+// 导入goods相关组件
+import CgoodsList from '../component/goods/goodsList.vue';
+import CgoodsDetails from '../component/goods/goodsDetails.vue';
+
+// 导入购物车相关组件
+import Cshopcar from '../component/shopcart/shopcar.vue';
+
 // 这个文件对外到处一个路由实例
 export default new VueRouter({
     routes:[
@@ -22,6 +29,12 @@ export default new VueRouter({
         {path:"/news/details/:id",component:CnewsDetails},
         // 配置图片相关路由
         {path:"/photo/list/:id",component:CphotoList},
-        {path:"/photo/details/:id",component:CphotoDetails}
+        {path:"/photo/details/:id",component:CphotoDetails},
+        // 配置商品相关路由
+        {path:"/goods/goodsList",component:CgoodsList},
+        {path:"/goods/goodsDetails/:id",component:CgoodsDetails},
+        // 配置购物车相关路由
+        {path:"/shopcart/shopcar/:ids",component:Cshopcar}
+
     ]
 });

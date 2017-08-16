@@ -10,12 +10,14 @@ import "mint-ui/lib/style.css";
 import "mui/dist/css/mui.css";
 // 引入mui的扩展图标样式
 import "mui/examples/hello-mui/css/icons-extra.css";
-
+// 引入Vue-preview插件包
+import VuePreview from 'vue-preview';
 
 // 1.1 手动use启用插件
 Vue.use(VueRouter);
 Vue.use(VueResource);
 Vue.use(MintUI);
+Vue.use(VuePreview);
 
 // 二、导入我们自己配置
 
